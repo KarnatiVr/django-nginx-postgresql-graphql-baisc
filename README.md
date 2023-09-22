@@ -1,0 +1,1 @@
+# django-nginx-postgresql-graphql-baisc

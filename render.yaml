@@ -1,0 +1,15 @@
+databases:
+  - name: app
+    databaseName: postgres
+    user: postgres
+
+services:
+  - type: web
+    name: app
+    env: docker
+    dockerfilePath: ./django
+    envVars:
+      - key: DATABASE_URL
+        fromDatabse:
+          name: app
+          property: connectionString
